@@ -1,0 +1,46 @@
+step 1:-create database.
+       create database incubyte;
+step 2:-create table customer.
+     CREATE TABLE customer (
+    CustomerName VARCHAR(255) NOT NULL PRIMARY KEY,
+    CustomerID VARCHAR(18) NOT NULL,
+    CustomerOpenDate DATE NOT NULL,
+	LastConsultedDate DATE,
+	VaccinationType CHAR(5),
+	DoctorConsulted CHAR(255),
+	State CHAR(5),
+	Country CHAR(5),
+	PostCode int,
+	DateofBirth DATE,
+	ActiveCustomer CHAR(1)
+   );
+step 3:-Insert query.
+USE [incubyte]
+GO
+
+INSERT INTO [dbo].[customer]
+           ([CustomerName]
+           ,[CustomerID]
+           ,[CustomerOpenDate]
+           ,[LastConsultedDate]
+           ,[VaccinationType]
+           ,[DoctorConsulted]
+           ,[State]
+           ,[Country]
+           ,[PostCode]
+           ,[DateofBirth]
+           ,[ActiveCustomer])
+     VALUES
+           ('Matt'
+           ,6
+           ,GETDATE()
+           ,GETDATE()
+           ,'MVD'
+           ,'Pradnya'
+           ,'Goa'
+           ,'Panji'
+           ,20800
+           ,GETDATE()
+           ,'A')
+GO
+
